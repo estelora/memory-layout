@@ -88,7 +88,7 @@ input[type="checkbox"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 20pt;
+  font-size: 30pt;
   z-index: 11;
 
 }
