@@ -1,0 +1,160 @@
+body {
+  margin: 0px;
+  margin-left: 1em;
+  margin-right: .75em;
+  border: 0px;
+  background: #138bff;
+}
+
+
+.container {
+  padding: 0em;
+  background: #138bff;
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.header {
+  margin: 0;
+  padding: .5em 0 0 0;
+  border: 0;
+  vertical-align: baseline;
+  display: block;
+  font-size: 48pt;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.icon-lightbulb {
+  font-size: 30pt;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.game-info {
+  width: 85%%;
+}
+
+.game-info-lives{
+  float: left;
+  font-size: 8pt;
+  letter-spacing: -3px;
+}
+
+.game-info-time {
+  float: right;
+  font-size: 12pt;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.memory-board {
+  padding: 0;
+  width: 100%;
+}
+
+.game-card {
+  background-color: orange;
+  position: relative;
+  display:block;
+  border-right: 0;
+  border-bottom: 0;
+  float: left;
+  width: 15%;
+  padding-bottom: 15%;
+  height: 0;
+  margin: .25em;
+  border-radius: .25em;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 1;
+}
+
+.tile-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 20pt;
+  color: white;
+  background: orange;
+  width: 25px;
+  height: 25px;
+}
+
+.background {
+  position :absolute;
+  left :0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: red;
+  z-index: 10;
+  display: none;
+}
+
+input:checked + .background {
+  /* tile-text is shown when it's after a checked checkbox */
+  display: block;
+  -webkit-animation: flipInX 1s ease;
+}
+
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+  }
+}
+
+.back {
+  text-decoration: none;
+  margin: 0;
+  padding: .5em 0 0 0;
+  border: 0;
+  vertical-align: baseline;
+  display: block;
+  font-size: 20pt;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  width: 86%;
+}
